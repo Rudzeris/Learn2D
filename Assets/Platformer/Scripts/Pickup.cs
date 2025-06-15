@@ -12,7 +12,7 @@ public class Pickup : MonoBehaviour
             // Например, увеличить счет игрока или активировать эффект
             Debug.Log("Предмет подобран!");
 
-            //InventoryManager.Instance.AddItem(); // Добавляем предмет в инвентарь
+            InventoryManager.Instance.AddItem(); // Добавляем предмет в инвентарь
 
             // Удаляем предмет после подбора
             Destroy(gameObject);

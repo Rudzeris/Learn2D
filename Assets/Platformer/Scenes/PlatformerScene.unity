@@ -580,7 +580,6 @@ GameObject:
   - component: {fileID: 560568993}
   - component: {fileID: 560568994}
   - component: {fileID: 560568992}
-  - component: {fileID: 560568995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -751,19 +750,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &560568995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560568988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ccbacef77197349a9835a09e3824ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 1
 --- !u!1 &661470160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1385,7 @@ GameObject:
   - component: {fileID: 1014760075}
   - component: {fileID: 1014760074}
   - component: {fileID: 1014760073}
+  - component: {fileID: 1014760076}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Destroy
@@ -1518,6 +1505,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014760076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014760072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ea0b9eb1571c140b010fb0d1481bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dPos: {x: 0, y: 0}
 --- !u!1 &1106592329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 1106592332}
   - component: {fileID: 1106592331}
   - component: {fileID: 1106592330}
+  - component: {fileID: 1106592334}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1621,6 +1622,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1106592334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106592329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda855c3494459742af30d7d1dc35b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton: {fileID: 1540421031}
 --- !u!1 &1211869594
 GameObject:
   m_ObjectHideFlags: 0

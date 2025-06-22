@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeviceOperator : MonoBehaviour
 {
-    public float distance = 1.5f;
+    public float radius = 1.5f;
 
     void Update()
     {
@@ -11,11 +11,11 @@ public class DeviceOperator : MonoBehaviour
     }
     private void Operate()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, distance);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
 
         foreach (var hit in hits)
         {
-            var device = hit.collider.GetComponent<DoorOpenDevice>();
+            var device = hit.GetComponent<DoorOpenDevice>();
             if (device != null)
                 device.Operate();
         }

@@ -7,13 +7,25 @@ public class DoorOpenDevice : MonoBehaviour
 
     public void Operate()
     {
-        Vector3 pos;
-        if (_open)
-            pos = transform.position - (Vector3)dPos;
+        if(_open)
+            Close();
         else
-            pos = transform.position + (Vector3)dPos;
-
-        transform.position = pos;
-        _open = !_open;
+            Open();
+    }
+    public void Open()
+    {
+        if(!_open)
+        {
+            transform.position += (Vector3)dPos;
+            _open = true;
+        }
+    }
+    public void Close()
+    {
+        if (_open)
+        {
+            transform.position -= (Vector3)dPos;
+            _open = false;
+        }
     }
 }

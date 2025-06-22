@@ -18,4 +18,11 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("MenuScene"); // или индекс сцены, например, 0
     }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            OpenMenu();
+        }
+    }
 }

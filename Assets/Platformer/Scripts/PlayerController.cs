@@ -6,14 +6,14 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D body;
-    private Collider2D collider;
+    private Collider2D myCollider;
     private bool isRun = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     void FixedUpdate()
@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
 
         bool grounded = false;
-        Vector3 max = collider.bounds.max;
-        Vector3 min = collider.bounds.min;
+        Vector3 max = myCollider.bounds.max;
+        Vector3 min = myCollider.bounds.min;
         Vector2 point1 = new Vector2(max.x-0.1f, min.y - 0.2f);
         Vector2 point2 = new Vector2(min.x+0.1f, min.y - 0.2f);
         Collider2D hit = Physics2D.OverlapArea(point1, point2);
